@@ -1,3 +1,5 @@
+![Screenshot](Screenshot.png)
+
 # Summary
 I created a powerful dashboard that allows users to select top Japanese stocks and find non-correlating securities in real-time. This was made possible through the use of the Z by HP computer, which enabled me to dynamically run forecasting models using the Meta Prophet library and generative text generation. The combination of these technologies allowed for quick and accurate analysis of vast amounts of data to identify the most promising investment opportunities. With the ability to run these models in real-time, users can make informed decisions and adjust their investments as needed to stay ahead of the market. The Z by HP's high-performance processing capabilities, coupled with its advanced data visualization capabilities, made it the perfect tool for creating this dashboard, allowing users to explore investment opportunities and gain a competitive edge in the ever-changing world of finance.
 
