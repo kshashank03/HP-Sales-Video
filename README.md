@@ -12,8 +12,10 @@ I created a powerful dashboard that allows users to select top Japanese stocks a
 1. Create a virtual environment for the project using the following command:
     * `python -m venv <YOUR_ENV_NAME>`
 1. Activate the virtual environment using the following command:
-    * On Windows: myenv\Scripts\activate
-    * On Linux/Mac: source myenv/bin/activate
+    * On Windows: 
+        * If you're using command line: `myenv\Scripts\activate.bat`
+        * If you're using PowerShell: `myenv\Scripts\Activate.ps1`
+    * On Linux/Mac: source `myenv/bin/activate`
 1. Install the required packages using pip by running the following command:
     * `pip install -r requirements.txt`
 1. Launch the Streamlit app by running the following command:
