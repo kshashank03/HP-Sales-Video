@@ -6,16 +6,16 @@ I created a powerful dashboard that allows users to select top Japanese stocks a
 **Please don't make financial decisions based on this model**
 
 # Instructions
-1. Clone this Git repository using the following command:
-1. Using the terminal or command prompt, cd into `HP-Sales-Video`
+1. Clone this Git repository using the following command: `git clone https://github.com/kshashank03/HP-Sales-Video.git`
+1. Using the terminal or command prompt, `cd` into `HP-Sales-Video`
 1. Check if you have Python installed on your machine by typing `python --version` in your terminal or command prompt window. If Python is not installed, download and install Python from the official website.
 1. Create a virtual environment for the project using the following command:
     * `python -m venv <YOUR_ENV_NAME>`
 1. Activate the virtual environment using the following command:
     * On Windows: 
-        * If you're using command line: `myenv\Scripts\activate.bat`
-        * If you're using PowerShell: `myenv\Scripts\Activate.ps1`
-    * On Linux/Mac: source `myenv/bin/activate`
+        * If you're using command line: `<YOUR_ENV_NAME>\Scripts\activate.bat`
+        * If you're using PowerShell: `<YOUR_ENV_NAME>\Scripts\Activate.ps1`
+    * On Linux/Mac: source `<YOUR_ENV_NAME>/bin/activate`
 1. Install the required packages using pip by running the following command:
     * `pip install -r requirements.txt`
 1. Launch the Streamlit app by running the following command:

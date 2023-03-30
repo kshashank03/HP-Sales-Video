@@ -30,7 +30,8 @@ with st.sidebar:
     periods = st.slider('How many days into the future do you want to predict?', 10, 700, 90, 1)
     preds = 16 * periods
     st.write(f"Select a company using the dropdown above, if the dashboard errors out, hit the hamburger menu on the upper right and 'Rerun'. Every run will generate {preds} new predicions spread over 16 charts")
-    
+    st.warning("This is for demo purposes, please don't make investment decisions based on what you see here", icon="⚠️")
+
 new_data = data[data["Name"].isin([company])].reset_index(drop=True)
 st.markdown(f""" 
 # {new_data["Name"][0]}
@@ -39,7 +40,6 @@ st.markdown(f"""
 
 """)
 
-# periods = 300
 
 def chart_creator(data, col, periods):
     forecast_df = data[['Date', col]].rename(columns={'Date':'ds', col:'y'})
@@ -70,6 +70,7 @@ low_chart_components = chart_creator(new_data, 'Low', periods)
 close_chart_components = chart_creator(new_data, 'Close', periods)
 volume_chart_components = chart_creator(new_data, 'Volume', periods)
 
+st.info('Each of these charts represents a different Prophet model being run dynamically', icon="ℹ️")
 col1, col2 = st.columns(2)
 
 with col1:
@@ -103,15 +104,15 @@ for perc, corp in enumerate(random.choices(data[data['Name'] != company]["Name"]
                           chart_creator(new_new_data, 'Volume', periods),
                           blurb
                           ]
-print(holding_dict.keys())
+st.info(f'You just generated {periods * 4 * 3} data points dynamically', icon="ℹ️")
 tab1, tab2, tab3 = st.tabs(list(holding_dict.keys())[:3])
 
 with tab1:
+    st.info('This blurb was generated using a large language model which can help explain complicated topics in an understandable way', icon="ℹ️")
     st.subheader(holding_dict[list(holding_dict.keys())[0]][4])
     col1, col2 = st.columns(2)
 
     with col1:
-        
         st.header("Open")
         open_chart = st.altair_chart(holding_dict[list(holding_dict.keys())[0]][0], use_container_width=True)
         st.header("High")
@@ -124,6 +125,7 @@ with tab1:
         volume_chart = st.altair_chart(holding_dict[list(holding_dict.keys())[0]][3], use_container_width=True)
 
 with tab2:
+    st.subheader(holding_dict[list(holding_dict.keys())[1]][4])
     col1, col2 = st.columns(2)
 
     with col1:
@@ -139,6 +141,7 @@ with tab2:
         volume_chart = st.altair_chart(holding_dict[list(holding_dict.keys())[1]][3], use_container_width=True)
 
 with tab3:
+    st.subheader(holding_dict[list(holding_dict.keys())[2]][4])
     col1, col2 = st.columns(2)
 
     with col1:
